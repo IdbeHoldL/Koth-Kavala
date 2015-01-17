@@ -16,10 +16,14 @@ if (isServer) then
 	
 	_name = [(name _unit)] call strip;
 	
+	_xp = 0;
+	_kills = 0;
+	_deaths = 0;
+		
 	_result = ([format["existPlayerInfo:%1", _uid], 2] call async) select 0;
 	
 	if (!_result) then {
-		[format["insertPlayerStats:%1:%2", _uid, _name,0,0,0], 2] call async;
+		[format["insertPlayerStats:%1:%2:%3:%4:%5", _uid, _name, _xp, _kills, _deaths], 2] call async;
 	};	
 
 	//get saved stats from server

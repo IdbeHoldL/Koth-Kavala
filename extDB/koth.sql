@@ -7,9 +7,9 @@ CREATE TABLE `playerinfo` (
   `UID` varchar(32) NOT NULL,
   `GUID` varchar(34) NOT NULL,
   `Name` varchar(128) NOT NULL,
-  `XP` text,
-  `Kills` text,
-  `Deaths` text,
+  `XP` int(100) NOT NULL DEFAULT '0',
+  `Kills` int(100) NOT NULL DEFAULT '0',
+  `Deaths` int(100) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
