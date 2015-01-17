@@ -16,7 +16,7 @@ if (isServer) then
 	
 	_name = [(name _unit)] call strip;
 	
-	_result = [format["existPlayerInfo:%1", _uid], 2] call async;	
+	_result = ([format["existPlayerInfo:%1", _uid], 2] call async) select 0;
 	
 	if (!_result) then {
 		[format["insertPlayerStats:%1:%2", _uid, _name], 2] call async;
