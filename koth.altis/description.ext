@@ -1,12 +1,12 @@
-onLoadName = "";
-author = "";
+onLoadName = "Koth Kavala";
+author = "BAROD";
 onLoadMission="";
 onLoadIntroTime = 0;
 onLoadMissionTime = 0;
 
 class Header
 {
-	gameType= SANDBOX;
+	gameType= SC;
 	minPlayers=1;
 	maxPlayers=48;
 };
@@ -24,6 +24,8 @@ corpseRemovalMaxTime = 600;
 wreckLimit = 10;
 wreckRemovalMinTime = 400;
 wreckRemovalMaxTime = 600;
+
+#include "functions\functions.h"
 
 class RscTitles
 {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="ARMA3">
+<Project name="Koth">
 	<Package name="intro">
 		<Key ID="STR_DGX_ENTERBLU">	
 			<Original>Now entering BLUFOR Base</Original>
