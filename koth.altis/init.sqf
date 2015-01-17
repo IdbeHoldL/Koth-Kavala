@@ -33,35 +33,11 @@ getRankInfo = compile preprocessFileLineNumbers "other_functions\getRankInfo.sqf
 
 getWeaponInfo = compile preprocessFileLineNumbers "other_functions\getWeaponInfo.sqf";
 
-
-equipLoadout = compile preprocessFileLineNumbers "db_functions\equipLoadout.sqf";
-
-saveLoadout = compile preprocessFileLineNumbers "db_functions\saveLoadout.sqf";
-
-getPlayerStats = compile preprocessFileLineNumbers "db_functions\getPlayerStats.sqf";
-
-updatePlayerStats = compile preprocessFileLineNumbers "db_functions\updatePlayerStats.sqf";
-
-
-CBA_fnc_defaultParam = compile preprocessFileLineNumbers "cba_functions\fnc_defaultParam.sqf";
-
-CBA_fnc_find = compile preprocessFileLineNumbers "cba_functions\fnc_find.sqf";
-
-CBA_fnc_split = compile preprocessFileLineNumbers "cba_functions\fnc_split.sqf";
-
-
 respawnTruck = compile preprocessFileLineNumbers "other_functions\respawnTruck.sqf";
 
 deleteWreck = compile preprocessFileLineNumbers "other_functions\deleteWreck.sqf";
 
 despawnVehicle = compile preprocessFileLineNumbers "other_functions\despawnVehicle.sqf";
-
-call compileFinal preprocessFileLineNumbers "FAR_revive\FAR_revive_init.sqf";
-[] call compileFinal PreProcessFile "scripts\zlt_fastrope.sqf";
-
-call compile preprocessFile "=BTC=_TK_punishment\=BTC=_tk_init.sqf";
-_logistic = execVM "=BTC=_Logistic\=BTC=_Logistic_Init.sqf";
-
 
 onEachFrame
 {
@@ -99,13 +75,22 @@ onEachFrame
 
 if(isServer) then
 {
+	[] execVM "db_functions\init_server.sqf";
 	"bluf" spawn respawnTruck;
 	"redf" spawn respawnTruck;
 	"indf" spawn respawnTruck;
 };
 
-if(!isServer) then
-{
+async = compile preprocessFileLineNumbers "db_functions\async.sqf";
+
+equipLoadout = compile preprocessFileLineNumbers "db_functions\equipLoadout.sqf";
+
+saveLoadout = compile preprocessFileLineNumbers "db_functions\saveLoadout.sqf";
+
+getPlayerStats = compile preprocessFileLineNumbers "db_functions\getPlayerStats.sqf";
+
+updatePlayerStats = compile preprocessFileLineNumbers "db_functions\updatePlayerStats.sqf";
+
 
 	waitUntil {!isNull player};
 	
@@ -221,8 +206,6 @@ if(!isServer) then
 	
 	player_stats_got = 0;
 	[[player], "getPlayerStats", false, false] spawn BIS_fnc_MP;
-		
-};
 
 [] execVM "scripts\zlt_civveh.sqf";
 [

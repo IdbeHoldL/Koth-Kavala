@@ -1,7 +1,6 @@
 onLoadName = "King Of The Hill";
 author = "Goatboy";
 onLoadMission="King Of The Hill V1.2 - The Goat Way";
-loadScreen =  "loadingscreen.jpg";
 onLoadIntroTime = 0;
 onLoadMissionTime = 0;
 

@@ -1,41 +1,30 @@
 if (isServer) then 
-{
-		_allWeapons = _this select 0;
-		sleep 0.5;
+{		
+	_request = _this select 0;
+	
+	_uid = _request select 0; 
 
-		_query = "UPDATE player SET ";
-		_query_strings = ["ammo = ", "weapons = ", "items = ", "assignitems = ", "headgear = ", "goggles = ", "vest = ", "vestitems = ", "uniform = ", "uniformitems = ", "backpack = ", "packitems = ", "handgunitems = ", "primarywep = ", "secondarywep = "];
+	_ammo = _request select 1; 
+	_weapons = _request select 2; 
+	_items = _request select 3; 
+	_assignitems = _request select 4; 
+	_headgear = _request select 5; 
+	_goggles = _request select 6; 
+	_vest = _request select 7; 
+	_vestitems = _request select 8; 
+	_uniform = _request select 9; 
+	_uniformitems = _request select 10; 
+	_backpack = _request select 11; 
+	_packitems = _request select 12; 
+	_handgunitems = _request select 13; 
+	_primarywep = _request select 14; 
+	_secondarywep = _request select 15; 
+	
+	_query = "updatePlayerSaveAll:" + str(_uid)
+	+ ":" + str(_ammo) + ":" + str(_weapons) + ":" + str(_items) + ":" + str(_assignitems) + ":" + str(_headgear) + ":" + str(_goggles)
+	+ ":" + str(_vest) + ":" + str(_vestitems) + ":" + str(_uniform) + ":" + str(_uniformitems)
+	+ ":" + str(_backpack) + ":" + str(_packitems) + ":" + str(_handgunitems) + ":" + str(_primarywep) + ":" + str(_secondarywep);
 
-		//some of the entries may be empty so we have to generate a string
-		for "_i" from 1 to (count _allWeapons)-1 do {
-			if (_i == (count _allWeapons)-1) then {
-				if ((_allWeapons select _i) != "") then {
-					_query = _query + (_query_strings select _i-1) + "'" + (_allWeapons select _i) + "'";
-				} else {
-					_query = _query + (_query_strings select _i-1) + "NULL";
-				};
-			} else {
-				if ((_allWeapons select _i) != "") then {
-					_query = _query + (_query_strings select _i-1) + "'" + (_allWeapons select _i) + "', ";
-				} else {
-					_query = _query + (_query_strings select _i-1) + "NULL,";
-				};
-			};
-		};
-		_check = format [" WHERE uid = '%1'", (_allWeapons select 0)];
-		_query = _query + _check;
-
-		while{!isNil("serverRunningQuery") && serverRunningQuery} do { 
-		sleep 0.5;//busy wait
-		};
-		serverRunningQuery = true;
-		_return = nil;
-		while {isNil("_return")} do {
-			_return = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommandAsync ['goatArma3', '%1']", _query];
-			if (_return == "") then {
-				_return = nil;
-			};
-			sleep 0.5; 
-		};
-		serverRunningQuery = false;
+	[_query] spawn async;
+	
 };
