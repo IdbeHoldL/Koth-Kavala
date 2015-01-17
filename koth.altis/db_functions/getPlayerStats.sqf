@@ -1,9 +1,7 @@
 if (isServer) then
 {
-	//check if player exists in db
 	_unit = _this select 0;
 	_uid = getPlayerUID _unit;
-	_name = name _unit;
 	
 	_startTime = diag_tickTime;
 	while {true} do
@@ -16,9 +14,11 @@ if (isServer) then
 	
 	if (_uid == "") exitWith {};
 	
+	_name = [(name _unit)] call strip;
+	
 	_result = [format["existPlayerInfo:%1", _uid], 2] call async;	
 	
-	if(count _result != 0) exitWith {
+	if (!_result) then {
 		[format["insertPlayerStats:%1:%2", _uid, _name], 2] call async;
 	};	
 

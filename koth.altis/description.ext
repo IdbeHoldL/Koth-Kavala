@@ -1,16 +1,16 @@
-onLoadName = "King Of The Hill";
-author = "Goatboy";
-onLoadMission="King Of The Hill V1.2 - The Goat Way";
+onLoadName = "";
+author = "";
+onLoadMission="";
 onLoadIntroTime = 0;
 onLoadMissionTime = 0;
 
-briefing = 0; //script
 class Header
 {
-	gameType=GTDM;
+	gameType= SANDBOX;
 	minPlayers=1;
 	maxPlayers=48;
 };
+
 respawn = "BASE";
 respawndelay = 25;
 joinUnassigned = 0;
@@ -24,44 +24,6 @@ corpseRemovalMaxTime = 600;
 wreckLimit = 10;
 wreckRemovalMinTime = 400;
 wreckRemovalMaxTime = 600;
-
-class CfgFunctions
-{
-	class myTag
-	{
-		class myCategory
-		{
-			class skipBriefing
-			{
-				file = "skipBriefing.sqf";
-				preInit = 1;
-			};
-		};
-	};
-};
-
-
-//class RscPicture 
-//{
-//	type = CT_STATIC;
-//	idc = -1;
-//	style = 48;
-//	colorBackground[] = {0, 0, 0, 0};
-//	colorText[] = {1, 1, 1, 1};
-//	font = "PuristaMedium"; //Typeface
-//	sizeEx = 0;
-//};
-
-class CfgSounds
-{
-    sounds[] = {WelcomeSound};
-    class WelcomeSound
-    {
-    name="WelcomeSound";
-    sound[]={sounds\WelcomeSound.ogg,0.9,1};
-    titles[] = {};
-    };
-};
 
 class RscTitles
 {

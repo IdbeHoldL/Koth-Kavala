@@ -1,10 +1,10 @@
 //player = _this select 0;
 _puid = getPlayerUID player;
+_player = player;
 
 _ammo = (magazines player);
 _ammo = [_ammo] call formatArray;
 _weapons = (weapons player);
-_weapons = _weapons + ["Throw","Put"];
 _weapons = [_weapons] call formatArray;
 _items = (items player);
 _items = [_items] call formatArray;
@@ -35,7 +35,7 @@ _secondarywep = [_secondarywep] call formatArray;
 
 
 //format return value, all weapons separated out into an array
-_return_response = [_puid, _ammo, _weapons, _items, _assignitems, _headgear, _goggles, _vest, _vestitems, _uniform, _uniformitems, _backpack, _packitems, _handgunitems, _primarywep, _secondarywep];
+_return_response = [_puid,_player, _ammo, _weapons, _items, _assignitems, _headgear, _goggles, _vest, _vestitems, _uniform, _uniformitems, _backpack, _packitems, _handgunitems, _primarywep, _secondarywep];
 
 
 _return_response
