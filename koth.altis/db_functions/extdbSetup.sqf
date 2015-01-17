@@ -23,7 +23,7 @@ if ( isNil {uiNamespace getVariable "extDB_ID"}) then
 	"extDB" callExtension "9:LOCK";
 	diag_log "extDB: Locked";
 
-	uiNamespace setVariable ["waste_server_extDB_ID", str(call(extDB_ID))];
+	uiNamespace setVariable ["extDB_ID", str(call(extDB_ID))];
 	_return = true;
 }
 else
