@@ -53,84 +53,84 @@ _uniform = uniform _unit;
 
 if(count (_uniform) == 0) then
 {
-   _uniform = [];
+   _uniform = "";
 };
 
 _vest = uniform _unit;
 
 if(count (_vest) == 0) then
 {
-   _vest = [];
+   _vest = "";
 };
 
 _backpack = backpack _unit;
 
 if(count (_backpack) == 0) then
 {
-   _backpack = [];
+   _backpack = "";
 };
 
 _goggles = goggles _unit;
 
 if(count (_goggles) == 0) then
 {
-   _goggles = [];
+   _goggles = "";
 };
 
 _headgear = headgear _unit;
 
 if(count (_headgear) == 0) then
 {
-   _headgear = [];
+   _headgear = "";
 };
 
 _primaryWeapon = primaryWeapon _unit;
 
 if(count (_primaryWeapon) == 0) then
 {
-   _primaryWeapon = [];
+   _primaryWeapon = "";
 };
 
 _secondaryWeapon = secondaryWeapon _unit;
 
 if(count (_secondaryWeapon) == 0) then
 {
-   _secondaryWeapon = [];
+   _secondaryWeapon = "";
 };
 
 _handgunWeapon = handgunWeapon _unit;
 
 if(count (_handgunWeapon) == 0) then
 {
-   _handgunWeapon = [];
+   _handgunWeapon = "";
 };
 
 _primaryWeaponItems = primaryWeaponItems _unit;
 
 if(count (_primaryWeaponItems) == 0) then
 {
-   _primaryWeaponItems = [];
+   _primaryWeaponItems = "";
 };
 
 _secondaryWeaponItems = secondaryWeaponItems _unit;
 
 if(count (_secondaryWeaponItems) == 0) then
 {
-   _secondaryWeaponItems = [];
+   _secondaryWeaponItems = "";
 };
 
 _handgunItems = handgunItems _unit;
 
 if(count (_handgunItems) == 0) then
 {
-   _handgunItems = [];
+   _handgunItems = "";
 };
 
 _assignedItems = assignedItems _unit;
 
 if(count (_assignedItems) == 0) then
 {
-   _assignedItems = [];
+   _assignedItems = "";
 };
 
 _loadedMags = [];
