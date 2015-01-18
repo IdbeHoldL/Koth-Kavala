@@ -39,12 +39,7 @@ while{_loop} do
 		while{true} do {
 			_pipe = "extDB" callExtension format["5:%1", _key];
 			if(_pipe == "") exitWith {_loop = false};
-			if(_pipe != "[3]") then {
-				_queryResult = _queryResult + _pipe;
-			} else {
-				diag_log format ["extDB: uisleep [5]: %1", diag_tickTime];
-				uisleep 0.1;
-			};
+			_queryResult = _queryResult + _pipe;
 		};
 	}
 	else
