@@ -25,10 +25,6 @@ publicVariable "TICKETS_IND";
 
 sleep 0.01;
 
-
-thirdPersonView = call(thirdPersonView);
-publicVariable "thirdPersonView";
-
 server_status = true;
 publicVariable "server_status";
 

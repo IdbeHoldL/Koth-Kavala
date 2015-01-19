@@ -37,7 +37,5 @@ _xp = _query select 0;
 _kills = _query select 1;
 _deaths = _query select 2;
 	
-player_stats_add = [_xp,_kills,_deaths];
-owner _player publicVariableClient "player_stats_add";
-player_stats_got = 1;
-owner _player publicVariableClient "player_stats_got";
+player_stats = [_xp,_kills,_deaths];
+owner _player publicVariableClient "player_stats";

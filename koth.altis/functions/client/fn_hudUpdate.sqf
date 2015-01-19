@@ -1,6 +1,6 @@
 while {true} do
 {
-	sleep 10;
+	uiSleep 3;
    if (isNull (uiNamespace getvariable ["statsDisplay",displayNull])) then 
     {	
         cutRsc ["statsScreen", "PLAIN"];

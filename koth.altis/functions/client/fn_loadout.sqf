@@ -1,8 +1,3 @@
-waitUntil {!isNull player};
-waitUntil {alive player};
-
-cutText ["Loading", "BLACK"];
-
 removeAllWeapons player;
 removeBackpack player;
 
@@ -17,7 +12,3 @@ player addmagazine "16Rnd_9x21_Mag";
 player addmagazine "16Rnd_9x21_Mag";
 
 player additem "FirstAidKit";
-
-cutText ["", "BLACK IN"];
-
-[] execVM "init\actions\init.sqf";

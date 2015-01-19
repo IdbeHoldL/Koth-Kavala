@@ -12,6 +12,11 @@ class CfgFunctions
 			class rankInfo {};
 			class thirdPersonView {};
 			class weaponInfo{};
+			class loadout{};
+			class addStats{};
+			class addEventhandlers{};
+			class setupStats{};
+			class setupLoadout{};
 		};
 	};
 
