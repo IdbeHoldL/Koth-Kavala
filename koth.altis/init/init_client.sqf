@@ -14,6 +14,7 @@ player_loadoutcooldown = false;
 [] spawn client_fnc_loadout;
 [] spawn client_fnc_hudUpdate;
 [] spawn client_fnc_thirdPersonView;
+[] spawn client_fnc_addEventhandlers;
 
 [] execVM "init\actions\init.sqf";
 

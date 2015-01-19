@@ -143,6 +143,3 @@ removeAllHandgunItems player;
 	};
 } forEach _backpackMagazines;
 
-// Addactions	
-[] execVM "init\actions\init.sqf";
-

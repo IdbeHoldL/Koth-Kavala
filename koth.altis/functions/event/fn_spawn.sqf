@@ -19,5 +19,3 @@ player addmagazine "16Rnd_9x21_Mag";
 player additem "FirstAidKit";
 
 cutText ["", "BLACK IN"];
-
-[] execVM "init\actions\init.sqf";
