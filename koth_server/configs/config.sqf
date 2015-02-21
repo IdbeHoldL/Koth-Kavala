@@ -1,1 +1,0 @@
-thirdPersonView = compileFinal str(true);

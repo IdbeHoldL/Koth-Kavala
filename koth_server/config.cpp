@@ -14,18 +14,18 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class extDB
+	class DB
 	{
 		tag = "extDB";
 		class extDB
 		{
-			file = "\koth_server\functions\extDB";
+			file = "\koth_server\functions\DB";
 			class async{};
 			class strip{};
 		};
 	};
 
-	class player
+	class Player
 	{
 		tag = "player";
 		class player
@@ -35,16 +35,6 @@ class CfgFunctions
 			class loadStats{};
 			class saveLoadout{};
 			class saveStats{};
-		};
-	};
-	
-	class vehicle
-	{
-		tag = "vehicle";
-		class vehicle
-		{
-			file = "\koth_server\functions\vehicle";
-			class spawnTruck{};
 		};
 	};
 };
