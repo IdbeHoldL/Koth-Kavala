@@ -11,6 +11,11 @@ if (!_extDB) exitWith {
 //create Playground
 [] call compile preprocessfilelinenumbers "koth_server\init\zone\init.sqf";
 
+
+// EventHandlers
+addMissionEventHandler ["HandleDisconnect",{_this call serverEvents_fnc_handleDisconnect; false}];
+
+
 sleep 0.01;
 
 TICKETS_BLU = 0;

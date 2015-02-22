@@ -37,4 +37,14 @@ class CfgFunctions
 			class saveStats{};
 		};
 	};
+	
+	class serverEvents
+	{
+		tag = "serverEvents";
+		class serverEvents
+		{
+			file = "\koth_server\functions\event";
+			class handleDisconnect{};
+		};
+	};
 };
