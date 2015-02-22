@@ -19,6 +19,3 @@ _uid = _this select 2;
 _containers = nearestObjects[_unit,["WeaponHolderSimulated"],5];
 {deleteVehicle _x;} foreach _containers;
 deleteVehicle _unit;
-
-// Disconnect BOT :P
-false;
