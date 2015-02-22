@@ -22,7 +22,6 @@ No, mission is incomplete and is really unplayable in current state !!
 
 
 ###Special Thanks
-Are incomplete in places
 
 * [Torndeco](https://github.com/Torndeco) for extdb
 * [Kirby ]() Base Classes
