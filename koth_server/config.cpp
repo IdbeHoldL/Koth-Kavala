@@ -44,7 +44,8 @@ class CfgFunctions
 		class serverEvents
 		{
 			file = "\koth_server\functions\event";
-			class handleDisconnect{};
+			class handleDisconnect {};
+			class onKilled {};
 		};
 	};
 };

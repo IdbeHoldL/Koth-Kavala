@@ -15,6 +15,9 @@ if (!_extDB) exitWith {
 // EventHandlers
 addMissionEventHandler ["HandleDisconnect",{_this call serverEvents_fnc_handleDisconnect; false}];
 
+"client_onPlayerKilled" addPublicVariableEventHandler
+{diag_log str(_this); (_this select 1) spawn serverEvents_fnc_onKilled};
+
 
 sleep 0.01;
 

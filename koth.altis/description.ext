@@ -27,6 +27,7 @@ wreckRemovalMinTime = 400;
 wreckRemovalMaxTime = 600;
 
 #include "functions\functions.h"
+#include "dialog\common.hpp"
 
 class RscTitles
 {
