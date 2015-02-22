@@ -7,7 +7,7 @@
     <img src="http://img.shields.io/badge/Download-1_MB-blue.svg?style=flat" alt="KOTH download">
   </a>
     <a href="#license">
-    <img src="http://img.shields.io/badge/License-OPEN-red.svg?style=flat" alt="KOTH license">
+    <img src=http://img.shields.io/badge/NonCommercial-NoDerivatives%204.0%20International-red.svg?style=flat" alt="KOTH license">
   </a>
   </a>
     <a href="https://github.com/BAROD/Koth_Kavala/issues">
