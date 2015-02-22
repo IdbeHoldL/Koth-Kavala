@@ -1,6 +1,9 @@
 <p align="center">
-  <h1 href="https://github.com/BAROD/Koth_Kavala" align="center">extDB2 by Torndeco</h3><br />
+  <h1 align="center">extDB2 by Torndeco</h3><br />
 </p>
+
+#### Download
+ - https://github.com/Torndeco/extDB2/releases
 
 #### Known Issues
  - https://github.com/Torndeco/extDB2/wiki/Known-Issues
