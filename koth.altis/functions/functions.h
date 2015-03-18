@@ -1,41 +1,31 @@
 class CfgFunctions
 {
-	class client
+	class KOTH
 	{
 		class client
 		{
 			file = "functions\client";
-			class autoSave{};
-			class formatArray{};
 			class hudUpdate{};
 			class playerMarker {};
-			class rankInfo {};
 			class thirdPersonView {};
-			class weaponInfo{};
 			class loadout{};
 			class addStats{};
 			class addEventhandlers{};
 			class setupStats{};
 			class setupLoadout{};
 		};
-	};
 
-	class clientEvents
-	{
 		class event
 		{
 			file = "functions\event";
 			class killed{};
 			class spawn{};
 		};
-	};
-
-	class store
-	{
-		class store
+		class network
 		{
-			file = "functions\store";
-			class buyWeapon{};
+			file = "functions\network";
+			class MPexec{};
+			class MP{};
 		};
 	};
 };

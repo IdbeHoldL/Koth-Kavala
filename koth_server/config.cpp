@@ -14,12 +14,12 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class DB
+	class extdb
 	{
 		tag = "extDB";
 		class extDB
 		{
-			file = "\koth_server\functions\DB";
+			file = "\koth_server\functions\extdb";
 			class async{};
 			class strip{};
 		};

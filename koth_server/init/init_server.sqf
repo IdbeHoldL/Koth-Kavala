@@ -2,8 +2,8 @@ _extDB = false;
 _extDB = [] call compile preprocessfilelinenumbers "koth_server\init\extDB\init.sqf";
 
 if (!_extDB) exitWith {
-	server_status = false;
-	publicVariable "server_status";
+	KOTH_GAME = false;
+	publicVariable "KOTH_GAME";
 
 	diag_log "extDB: Failed to Load";
 };
@@ -28,6 +28,6 @@ publicVariable "TICKETS_RED";
 TICKETS_IND = 0;
 publicVariable "TICKETS_IND";
 
-server_status = true;
-publicVariable "server_status";
+KOTH_GAME = true;
+publicVariable "KOTH_GAME";
 

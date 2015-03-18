@@ -1,5 +1,3 @@
-_id = _this select 0;
-
 player addEventHandler ["Respawn", { _this spawn clientEvents_fnc_spawn}];
 player addEventHandler ["Killed", { _this spawn clientEvents_fnc_killed }];
 
