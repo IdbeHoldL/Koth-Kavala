@@ -6,7 +6,6 @@ class CfgFunctions
 		{
 			file = "functions\client";
 			class hudUpdate{};
-			class playerMarker {};
 			class thirdPersonView {};
 			class loadout{};
 			class addStats{};

@@ -18,14 +18,14 @@ while {true} do
 	uiNamespace setVariable ['tickets_blu', floor (TICKETS_BLU / 3)];
 	uiNamespace setVariable ['tickets_red', floor (TICKETS_RED / 3)];
 	uiNamespace setVariable ['tickets_ind', floor (TICKETS_IND / 3)];
-	uiNamespace setVariable ['playerxp', player_stats select 0];
+	uiNamespace setVariable ['playerxp', KOTH_stats select 0];
 	
-	_rankinfo = (player_stats select 0) call client_fnc_rankInfo;
+	_rankinfo = (KOTH_stats select 0) call client_fnc_rankInfo;
 	
 	uiNamespace setVariable ['playerrank', _rankinfo select 0];
 	uiNamespace setVariable ['playernextrank', _rankinfo select 1];
-	uiNamespace setVariable ['playerkills', player_stats select 1];
-	uiNamespace setVariable ['playerdeaths', player_stats select 2];
+	uiNamespace setVariable ['playerkills', KOTH_stats select 1];
+	uiNamespace setVariable ['playerdeaths', KOTH_stats select 2];
 	
     with uiNamespace do
     {
