@@ -24,8 +24,6 @@ cutText ["Loading......", "BLACK"];
 KOTH_stats_add = [0,0,0];
 KOTH_stats = [0,0,0];
 
-[] call KOTH_fnc_addEventhandlers;
-
 waitUntil {sleep 0.01; (!(isNil "KOTH_GAME"))};
 
 if ( !KOTH_GAME ) exitWith { 
@@ -42,6 +40,8 @@ waitUntil { !isNull ( findDisplay 46 ) };
 {
 	( ( findDisplay 46) displayCtrl _x ) ctrlShow false;
 } forEach [ 1000, 1001, 1002, 1200, 1202 ];
+
+[] call KOTH_fnc_addEventhandlers;
 
 /*  Add rating  */
 player addRating 99999999;
