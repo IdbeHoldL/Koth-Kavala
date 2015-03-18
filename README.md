@@ -1,7 +1,8 @@
 <p align="center">
    <img src="http://arma3.com/assets/img/logos/arma3.png" alt="KOTH changelog">
-  <h1 align="center">King of the Hill/h3><br />
-   <h1 align="center">by BAROD/h4><br />
+  <h1 align="center">King of the Hill</h3>
+   <h1 align="center">by BAROD</h4>
+   <br/>
   <a href="https://github.com/BAROD/Koth_Kavala">
     <img src="http://img.shields.io/badge/Version-0.1-green.svg?style=flat" alt="KOTH changelog">
   </a>
