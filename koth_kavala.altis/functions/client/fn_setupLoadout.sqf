@@ -121,12 +121,14 @@ removeAllHandgunItems player;
 	_vestContainer addItemCargoGlobal [_x, (_vestItems select 1) select _forEachIndex];
 } forEach (_vestItems select 0);
 	
+	
 {
 	if ((count _x) > 0) then
 	{
 			_vestContainer addMagazineAmmoCargo [(_x select 0), 1, (_x select 1)];
 	};
 } forEach _vestMagazines;
+
 
 {
 	_backpackContainer addWeaponCargoGlobal [_x, (_backpackWeapons select 1) select _forEachIndex];
