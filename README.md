@@ -1,6 +1,6 @@
 <p align="center">
    <img src="http://fs1.directupload.net/images/150318/iwt2dave.jpg" alt="KOTH changelog">
-   <h1 align="center">KOTH-Kavala</h3><br />
+   <h1 align="center">KOTH Kavala</h3><br />
   <a href="https://github.com/BAROD/Koth_Kavala">
     <img src="http://img.shields.io/badge/Version-0.1-green.svg?style=flat" alt="KOTH changelog">
   </a>
