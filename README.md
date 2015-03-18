@@ -20,6 +20,11 @@
 
 No, mission is incomplete and is really unplayable in current state !!
 
+#### Help ?
+
+Contact me 
+
+Skype : ribbeck4
 
 ###Special Thanks
 
