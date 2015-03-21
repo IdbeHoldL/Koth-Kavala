@@ -1,5 +1,5 @@
 /*
-	File: fn_killed.sqf
+	File: fn_handlersKilled.sqf
 	Author: BAROD
 
 	Description:

@@ -41,7 +41,7 @@ waitUntil { !isNull ( findDisplay 46 ) };
 	( ( findDisplay 46) displayCtrl _x ) ctrlShow false;
 } forEach [ 1000, 1001, 1002, 1200, 1202 ];
 
-[] call KOTH_fnc_addEventhandlers;
+[] call KOTH_fnc_handlersSetup;
 
 /*  Add rating  */
 player addRating 99999999;
