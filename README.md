@@ -21,7 +21,7 @@
 
 No, mission is incomplete and is really unplayable in current state !!
 
-#### Help ?
+#### you want to help ?
 
 Contact me 
 
