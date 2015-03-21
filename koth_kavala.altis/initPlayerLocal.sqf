@@ -30,8 +30,7 @@ if ( !KOTH_GAME ) exitWith {
 	cutText [ "......", "BLACK"]; 
 };
 
-[[player], "player_fnc_loadStats", false, false] spawn KOTH_fnc_MP;
-waitUntil {KOTH_PlayerReady};
+waitUntil {KOTH_onSpawn}; //todo
 
 /*  Wait for 3D display  */
 waitUntil { !isNull ( findDisplay 46 ) };

@@ -1,17 +1,21 @@
-if (difficultyEnabled "3rdPersonView") then
-{
-	while {true} do
-	{
-		if (cameraView == "External") then
-		{
-			if ((vehicle player) == player) then
-			{
+/*
+	File: fn_thirdPersonView.sqf
+	Author: BAROD
+	Description:
+		Forces First Person View unless in Vehicle
+	Parameters:
+		NONE
+*/
+
+if (difficultyEnabled "3rdPersonView") then {
+	while {true} do {
+		if (cameraView isEqualto "External") then {
+			if ((vehicle player) isEqualto player) then {
 				player switchCamera "Internal";
 			}
 			else
 			{
-				if (typeOf(vehicle player) == "Steerable_Parachute_F") then
-				{
+				if (typeOf(vehicle player) isEqualto "Steerable_Parachute_F") then {
 					(vehicle player) switchCamera "Internal";
 				};
 			};
