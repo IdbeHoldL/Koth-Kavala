@@ -12,5 +12,5 @@
 waitUntil {sleep 0.01; (!(isNil "KOTH_GAME"))};
 
 if ( KOTH_GAME ) then {
-	_this call BAROD_fnc_loadStats;
+	_this call HIVE_fnc_loadStats;
 };

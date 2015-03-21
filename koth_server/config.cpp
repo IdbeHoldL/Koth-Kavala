@@ -14,20 +14,15 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class extdb
+	class HIVE
 	{
-		tag = "extDB";
 		class extDB
 		{
 			file = "\koth_server\functions\extdb";
 			class async{};
 			class strip{};
 		};
-	};
-
-	class Player
-	{
-		tag = "player";
+		
 		class player
 		{
 			file = "\koth_server\functions\player";
@@ -36,11 +31,7 @@ class CfgFunctions
 			class saveLoadout{};
 			class saveStats{};
 		};
-	};
-	
-	class serverEvents
-	{
-		tag = "serverEvents";
+
 		class serverEvents
 		{
 			file = "\koth_server\functions\event";

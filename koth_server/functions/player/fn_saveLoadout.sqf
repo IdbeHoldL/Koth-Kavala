@@ -166,4 +166,4 @@ _query = "updatePlayerSave:"
 + str(_primaryWeaponItems) + ":" + str(_secondaryWeaponItems) + ":" + str(_handgunItems) + ":" 
 + str(_assignedItems) + ":" + str(_loadedMags);
 
-[_query] spawn extDB_fnc_async;
+[_query] spawn HIVE_fnc_async;
