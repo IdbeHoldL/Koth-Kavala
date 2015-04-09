@@ -12,8 +12,11 @@ class Header
 	maxPlayers=48;
 };
 
-respawn = "BASE";
-respawndelay = 25;
+respawn = 3;
+respawnDelay = 15;
+respawnTemplates[] = {"Revive", "MenuPosition"};
+respawnOnStart = -1;
+
 joinUnassigned = 0;
 disabledAI = 1;
 saving = 0;
