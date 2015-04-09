@@ -32,6 +32,6 @@ if ( !KOTH_GAME ) then {
 	cutText [ "......", "BLACK"]; 
 	
 } else {
-
 	cutText [ "Client......", "BLACK"]; 
+	["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 };
