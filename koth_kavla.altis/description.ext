@@ -33,3 +33,10 @@ wreckRemovalMinTime = 400;
 wreckRemovalMaxTime = 600;
 
 #include "functions\functions.h"
+#include "dialog\common.hpp"
+#include "dialog\shop.hpp"
+
+class RscTitles
+{
+	#include "dialog\ui.hpp"
+};

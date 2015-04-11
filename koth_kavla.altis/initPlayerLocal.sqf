@@ -29,11 +29,14 @@ waitUntil { !isNull ( findDisplay 46 ) };
 	( ( findDisplay 46) displayCtrl _x ) ctrlShow false;
 } forEach [ 1000, 1001, 1002, 1200, 1202 ];
 
+/* Loadout */
+[] call KOTH_fnc_playerLoadout;
+
 /*  Event Handlers */
 [] call KOTH_fnc_initEventHandlers;
 
-/* Loadout */
-[] call KOTH_fnc_playerLoadout;
+/*  HUD */
+[] call KOTH_fnc_playerHud;
 
 /*  BIS Group System */
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
