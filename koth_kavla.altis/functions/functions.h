@@ -14,6 +14,7 @@ class CfgFunctions
 		{
 			file = "functions\client";
 			class playerLoadout{};
+			class playerMarkers{};
 		};				
 	};
 };

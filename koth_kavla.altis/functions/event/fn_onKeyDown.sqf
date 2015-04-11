@@ -31,7 +31,7 @@ switch (true) do {
 	
 	case ( _code in actionKeys "ShowMap" ): {
 		if !( visibleMap ) then {
-		
+			[] spawn koth_fnc_playerMarkers;
 		};
 	};
 
