@@ -1,3 +1,13 @@
+/*
+	File: fn_playerLoadout.sqf
+	Author: BAROD
+	
+	Description:
+		NONE
+	Parameters:
+		NONE
+*/
+
 removeAllWeapons player;
 removeBackpack player;
 

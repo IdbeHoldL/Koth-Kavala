@@ -107,10 +107,11 @@ class Mission
 		briefingName="King of the Hill";
 		overviewText="Koth Kavala";
 		resistanceWest=0;
-		startWeather=0.89999998;
+		timeOfChanges=2.88e+008;
+		startWeather=0.099999994;
 		startWind=9.9993995e-005;
 		startWaves=9.9993995e-005;
-		forecastWeather=0.89999998;
+		forecastWeather=0.099999994;
 		forecastWind=9.9993995e-005;
 		forecastWaves=9.9993995e-005;
 		forecastLightnings=9.9993995e-005;
@@ -7869,7 +7870,6 @@ class Mission
 			vehicle="C_Hatchback_01_sport_F";
 			skill=0.60000002;
 			text="rc";
-			init="";
 		};
 		class Item580
 		{
@@ -7880,7 +7880,6 @@ class Mission
 			vehicle="C_Hatchback_01_sport_F";
 			skill=0.60000002;
 			text="rc_1";
-			init="";
 		};
 		class Item581
 		{
@@ -7891,7 +7890,6 @@ class Mission
 			vehicle="C_Hatchback_01_sport_F";
 			skill=0.60000002;
 			text="rc_2";
-			init="";
 		};
 		class Item582
 		{
@@ -7902,7 +7900,6 @@ class Mission
 			vehicle="C_Hatchback_01_sport_F";
 			skill=0.60000002;
 			text="rc_3";
-			init="";
 		};
 		class Item583
 		{
@@ -7913,7 +7910,6 @@ class Mission
 			vehicle="C_Hatchback_01_sport_F";
 			skill=0.60000002;
 			text="rc_4";
-			init="";
 		};
 		class Item584
 		{
@@ -7924,7 +7920,6 @@ class Mission
 			vehicle="C_Hatchback_01_sport_F";
 			skill=0.60000002;
 			text="rc_5";
-			init="";
 		};
 		class Item585
 		{
