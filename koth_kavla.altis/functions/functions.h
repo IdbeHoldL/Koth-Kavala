@@ -16,9 +16,9 @@ class CfgFunctions
 			class playerLoadout{};
 			class playerMarkers{};
 			class playerHud{};
-			class playerAction{};
 			class playerEH{};
 			class playerView{};
+			class playerTags{};
 		};
 		class shop
 		{

@@ -22,6 +22,7 @@ waitUntil { local player };
 
 /* Variables */
 KOTH_soundLevel = false;
+KOTH_TagsOn = false;
 KOTH_store = 0;
 
 missionNamespace setVariable["player_stats",[0,0,0,0]];
@@ -39,6 +40,14 @@ waitUntil { !isNull ( findDisplay 46 ) };
 	( ( findDisplay 46) displayCtrl _x ) ctrlShow false;
 } forEach [ 1000, 1001, 1002, 1200, 1202 ];
 
+/*  Add rating  */
+player addRating 99999999;
+player addScore 99999999;
+
+/*  More */
+player setVariable[ "nametag", profileName, true ];
+player setVariable[ "steamID", getPlayerUID player ];
+
 /* Loadout */
 [] call KOTH_fnc_playerLoadout;
 
@@ -50,13 +59,5 @@ waitUntil { !isNull ( findDisplay 46 ) };
 
 /*  BIS Group System */
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
-
-/*  Add rating  */
-player addRating 99999999;
-player addScore 99999999;
-
-/*  More */
-player setVariable[ "nametag", profileName, true ];
-player setVariable[ "steamID", getPlayerUID player ];
 
 0 cutText ["","BLACK IN"];

@@ -35,7 +35,13 @@ switch (true) do {
 		};
 	};
 	case (_code in [199,219,220]): {
-		[] spawn KOTH_fnc_playerAction;
+		KOTH_TagsOn = !KOTH_TagsOn;
+		if (KOTH_TagsOn) then {
+			KOTH_IdPlayerTags = ["KOTH_PlayerTags","onEachFrame","KOTH_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
+		} else {
+			[KOTH_IdPlayerTags,"onEachFrame"] call BIS_fnc_removeStackedEventHandler;
+		};
+		_handled = true;
 	};
 };
 
