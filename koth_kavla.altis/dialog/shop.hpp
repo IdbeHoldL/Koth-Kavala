@@ -43,7 +43,7 @@ class koth_shop {
 			y = 0.766059 * safezoneH + safezoneY;
 			w = 0.112015 * safezoneW;
 			h = 0.0280062 * safezoneH;
-			onButtonClick = "[] spawn life_fnc_shopBuy;";
+			onButtonClick = "[] spawn KOTH_fnc_shopBuy;";
 		};
 		class ShopCancel: KOTH_RscButtonMenu
 		{

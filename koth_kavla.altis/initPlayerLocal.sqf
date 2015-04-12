@@ -18,8 +18,11 @@ waitUntil { !isNull player };
 waitUntil { local player };
 
 /* Variables */
+KOTH_soundLevel = false;
+KOTH_store = 0;
 
-koth_soundLevel = false;
+missionNamespace setVariable["player_stats",[0,0,0,0]];
+missionNamespace setVariable["ticket_stats",[0,0,0]];
 
 /*  Wait for 3D display  */
 waitUntil { !isNull ( findDisplay 46 ) };
@@ -33,7 +36,7 @@ waitUntil { !isNull ( findDisplay 46 ) };
 [] call KOTH_fnc_playerLoadout;
 
 /*  Event Handlers */
-[] call KOTH_fnc_initEventHandlers;
+[] call KOTH_fnc_playerEH;
 
 /*  HUD */
 [] call KOTH_fnc_playerHud;

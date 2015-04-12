@@ -10,14 +10,13 @@
 
 private["_store","_className"];
 
-_store = lbData[1000,(lbCurSel 1002)];
-_className = lbData[1000,(lbCurSel 1003)];
+_className = lbData[1003,(lbCurSel 1003)];
 
-switch (_store) do {
-	case "Vehicle Shop": {
+switch (KOTH_store) do {
+	case 0: {
 		_vehicle = createVehicle [_className, (position player), [], 10, "NONE"];
 	};
-	case "Weapon Shop": {
-		
+	case 1: {
+	
 	};
 };

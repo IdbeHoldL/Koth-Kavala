@@ -6,17 +6,18 @@ class CfgFunctions
 		class client_event
 		{
 			file = "functions\event";
-			class initEventHandlers{};
 			class onKeyDown{};
 			class onRespawn{};
+			class onKilled{};
 		};	
-		class client
+		class player
 		{
-			file = "functions\client";
+			file = "functions\player";
 			class playerLoadout{};
 			class playerMarkers{};
 			class playerHud{};
 			class playerAction{};
+			class playerEH{};
 		};
 		class shop
 		{

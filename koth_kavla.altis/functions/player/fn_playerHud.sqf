@@ -21,22 +21,28 @@ while {true} do {
         };
     };
     
-	uiNamespace setVariable ['tickets_west', floor (0 / 3)];
-	uiNamespace setVariable ['tickets_east', floor (0 / 3)];
-	uiNamespace setVariable ['tickets_indep', floor (0 / 3)];
-	uiNamespace setVariable ['player_xp', 0];
+	_ticket = missionNamespace getVariable "ticket_stats";	
+	uiNamespace setVariable ['tickets_west', floor (_ticket select 0 / 3)];
+	uiNamespace setVariable ['tickets_east', floor (_ticket select 1 / 3)];
+	uiNamespace setVariable ['tickets_indep', floor (_ticket select 2 / 3)];
 	
-	uiNamespace setVariable ['playerrank', 0];
-	uiNamespace setVariable ['playernextrank', 0];
-	uiNamespace setVariable ['playerkills', 0];
-	uiNamespace setVariable ['playerdeaths', 0];
+	_stats = missionNamespace getVariable "player_stats";	
+	_nextRank = 0;
+	_nextRank = (_stats select 0) * ( (_stats select 0) - 1) * 500;    
+	if(_nextRank < 1) then {_nextRank = 500;};
+	
+	uiNamespace setVariable ['playerrank', (_stats select 0)];
+	uiNamespace setVariable ['playerkills', (_stats select 1)];
+	uiNamespace setVariable ['playerdeaths', (_stats select 2)];
+	uiNamespace setVariable ['playerxp', (_stats select 3)];
+	uiNamespace setVariable ['playernextrank',  _nextRank];
 	
     with uiNamespace do {
-		_output = format ["Rank: %1   XP: %2/%3", 0, 0, 0];
+		_output = format ["Rank: %1   XP: %2/%3", playerrank, playerxp, playernextrank];
         statsxp ctrlSetText _output;
         statsxp ctrlCommit 0.1; 
 		
-		_output = format ["Kills: %1   Deaths: %2", 0, 0];
+		_output = format ["Kills: %1   Deaths: %2", playerkills, playerdeaths];
 		statskills ctrlSetText _output;
         statskills ctrlCommit 0.1; 
 		
