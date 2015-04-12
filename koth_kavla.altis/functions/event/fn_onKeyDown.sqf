@@ -31,11 +31,14 @@ switch (true) do {
 	
 	case ( _code in actionKeys "ShowMap" ): {
 		if !( visibleMap ) then {
-			[] spawn koth_fnc_playerMarkers;
+			[] spawn KOTH_fnc_playerMarkers;
 		};
 	};
-
+	case (_code in [199,219,220]): {
+		[] spawn KOTH_fnc_playerAction;
+	};
 };
+
 
 switch (_code) do {
 	//U
@@ -44,13 +47,13 @@ switch (_code) do {
     };
 	//F1
 	case 59 : {
-		koth_soundLevel = !koth_soundLevel;
-		if (koth_soundLevel) then {
+		KOTH_soundLevel = !KOTH_soundLevel;
+		if (KOTH_soundLevel) then {
 			1 fadeSound 0.1; 
-			0 = ["<t size = '0.8' shadow = '0' color = '#99ffffff'>Sound off</t>", 0, 1, 5, 2, 0, 1] spawn bis_fnc_dynamictext;
+			0 = ["<t size = '0.8' shadow = '0' color = '#99ffffff'>You've inserted your earplugs.</t>", 0, 1, 5, 2, 0, 1] spawn bis_fnc_dynamictext;
 		} else {
 			1 fadeSound 1;
-			0 = ["<t size = '0.8' shadow = '0' color = '#99ffffff'>Sound on</t>", 0, 1, 5, 2, 0, 1] spawn bis_fnc_dynamictext;
+			0 = ["<t size = '0.8' shadow = '0' color = '#99ffffff'>You've taken out your earplugs.</t>", 0, 1, 5, 2, 0, 1] spawn bis_fnc_dynamictext;
 		};
 		_handled = true;
     };

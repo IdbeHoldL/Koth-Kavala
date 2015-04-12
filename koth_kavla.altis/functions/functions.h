@@ -16,13 +16,14 @@ class CfgFunctions
 			class playerLoadout{};
 			class playerMarkers{};
 			class playerHud{};
+			class playerAction{};
 		};
 		class shop
 		{
 			file = "functions\shop";
-			class fetchVehInfo{};
-			class fetchWepInfo{};
+			class fetchCfgInfo{};
 			class shopMenu{};
+			class shopBuy{};
 		};				
 	};
 };
