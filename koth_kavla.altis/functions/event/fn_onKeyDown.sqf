@@ -45,7 +45,6 @@ switch (true) do {
 	};
 };
 
-
 switch (_code) do {
 	//U
 	case 22 : {
@@ -63,6 +62,17 @@ switch (_code) do {
 		};
 		_handled = true;
     };
+	//H
+	case 35: {
+		if (currentweapon player != "") then{
+			KOTH_HolsteredWep = currentweapon player;
+			player action["switchWeapon", player, player, 100];
+		} else {
+			if (KOTH_HolsteredWep != "") then{
+				player selectWeapon KOTH_HolsteredWep;
+			};
+		};	
+	};
 };
 
 _handled;

@@ -19,7 +19,7 @@ if (isPlayer _victim && isPlayer _killer) then {
 		if (_killer isKindOf "Man") then {
 			if ((faction _victim) != (faction _killer)) then {
 				if (isPlayer _killer) then {
-					[1,0,100] call KOTH_fnc_playerLevel;
+					[100,0,1] call KOTH_fnc_playerLevel;
 				};
 				if (isPlayer _victim) then {
 					[0,1,0] call KOTH_fnc_playerLevel;
@@ -28,7 +28,7 @@ if (isPlayer _victim && isPlayer _killer) then {
 				_distance = floor(_killer distance _victim);
 				_killerWep = gettext((configFile >> "CfgWeapons" >> currentWeapon _killer) >> "picture");			
 				
-				_txt = format ["<t align='left' size='0.9'>%1 </t><img size='1.0' align='left' image='%2'/><t align='left' size='0.9'> %3 </t><t align='left' size='0.9'>[%4m]</t>",_killer,_killerWep,_victim,_distance];
+				_txt = format ["<t align='left' size='0.9'>%1 </t><img size='1.0' align='left' image='%2'/><t align='left' size='0.9'> %3 </t><t align='left' size='0.9'>[%4m]</t>",_killer getVariable ["nametag",name _killer],_killerWep,_victim getVariable ["nametag",name _victim],_distance];
 			} else {
 			
 				//Team kill 
@@ -39,7 +39,7 @@ if (isPlayer _victim && isPlayer _killer) then {
 		{
 			if (isPlayer _killer) then {
 				{
-					[1,0,100] call KOTH_fnc_playerLevel;
+					[100,0,1] call KOTH_fnc_playerLevel;
 				} forEach crew _killer;
 			};
 					
@@ -50,7 +50,7 @@ if (isPlayer _victim && isPlayer _killer) then {
 			_distance = floor(_killer distance _victim);
 			_killerVeh  = getText(configFile >> "CfgVehicles" >> (typeOf vehicle _killer) >> "picture");
 			
-			_txt = format ["<t align='left' size='0.9'>%1 </t><img size='1.0' align='left' image='%2'/><t align='left' size='0.9'> %3 </t><t align='left' size='0.9'>[%4m]</t>",_killer,_killerVeh,_victim,_distance];
+			_txt = format ["<t align='left' size='0.9'>%1 </t><img size='1.0' align='left' image='%2'/><t align='left' size='0.9'> %3 </t><t align='left' size='0.9'>[%4m]</t>",_killer getVariable ["nametag",name _killer],_killerVeh,_victim getVariable ["nametag",name _victim],_distance];
 		};
 	}
 	else
@@ -62,5 +62,5 @@ if (isPlayer _victim && isPlayer _killer) then {
 }; 
 
 if (_txt != "") then {
-	[[_txt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5],"BIS_fnc_dynamicText",nil,true] spawn KOTH_fnc_MP;
+	[[_txt,[safezoneX + 0.01 * safezoneW,2.0],[safezoneY + 0.01 * safezoneH,0.3],30,0.5],"BIS_fnc_dynamicText",nil,true] spawn BIS_fnc_MP;
 };
