@@ -18,6 +18,7 @@ class CfgFunctions
 			class playerHud{};
 			class playerAction{};
 			class playerEH{};
+			class playerView{};
 		};
 		class shop
 		{

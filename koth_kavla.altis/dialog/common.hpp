@@ -407,7 +407,7 @@ class KOTH_RscText {
 	shadow = 1;
 	colorShadow[] = {0, 0, 0, 0.5};
 	font = "PuristaMedium";
-	SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 30) * 1)";
 	text = "";
 	colorText[] = {1, 1, 1, 1};
 	colorBackground[] = {0, 0, 0, 0};
@@ -415,6 +415,7 @@ class KOTH_RscText {
 	tooltipColorText[] = {1,1,1,1};
 	tooltipColorBox[] = {1,1,1,1};
 	tooltipColorShade[] = {0,0,0,0.65};
+	align = "center";
 };
 
 class KOTH_RscLine : KOTH_RscText {
@@ -472,7 +473,7 @@ class KOTH_RscStructuredText {
 	class Attributes {
 		font = "PuristaMedium";
 		color = "#ffffff";
-		align = "left";
+		align = "center";
 		shadow = 1;
 	};
 };
@@ -790,9 +791,8 @@ class KOTH_RscState
 	shadow = 2;
 	colorFrame[] = {0, 0, 0, 1};
 	colorBackground[] = {0,0,0,0.7};
-	colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1};
+	colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 };
-
 class KOTH_RscListBox
 {
 	idc = 1;

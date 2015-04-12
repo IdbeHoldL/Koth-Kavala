@@ -17,12 +17,19 @@ waitUntil { !isNull player };
 /* Wait for player object to be local */
 waitUntil { local player };
 
+0 cutText["Setting up client, please wait...","BLACK FADED"];
+0 cutFadeOut 9999999;
+
 /* Variables */
 KOTH_soundLevel = false;
 KOTH_store = 0;
 
 missionNamespace setVariable["player_stats",[0,0,0,0]];
 missionNamespace setVariable["ticket_stats",[0,0,0]];
+missionNamespace setVariable["player_data",[]];
+
+0 cutText["Finishing client setup procedure","BLACK FADED"];
+0 cutFadeOut 9999999;
 
 /*  Wait for 3D display  */
 waitUntil { !isNull ( findDisplay 46 ) };
@@ -51,4 +58,5 @@ player addScore 99999999;
 /*  More */
 player setVariable[ "nametag", profileName, true ];
 player setVariable[ "steamID", getPlayerUID player ];
-player setVariable [ "BIS_noCoreConversations", true ];
+
+0 cutText ["","BLACK IN"];
