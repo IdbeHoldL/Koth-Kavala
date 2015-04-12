@@ -1090,7 +1090,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="weapon_shop";
-					init="this enableSimulation false;this allowdamage false; this addAction[""Weapon Shop"",KOTH_fnc_shopMenu,[""weapon_shop""]];";
+					init="this enableSimulation false;this allowdamage false;this addAction[""Clothing Shop"",KOTH_fnc_shopMenu,[""clothing_shop""]]; this addAction[""Weapon Shop"",KOTH_fnc_shopMenu,[""weapon_shop""]];";
 				};
 			};
 		};

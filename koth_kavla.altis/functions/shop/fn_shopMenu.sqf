@@ -46,4 +46,19 @@ switch (_store) do {
 			_list lbSetValue [(lbSize _list)-1,_ForEachIndex];
 		} foreach _weaponList;
 	};
+	case "clothing_shop": {
+		ctrlSetText [1002,"Clothing Shop"];
+		KOTH_store = 1;
+		_clothingList = [["U_O_FullGhillie_ard"],["U_O_FullGhillie_ard"],["U_O_FullGhillie_ard"]];
+		_list = ((findDisplay 1000) displayCtrl 1003);
+		lbClear _list;
+
+		{						       
+			_info = [_x select 0] call KOTH_fnc_fetchCfgInfo;
+			_list lbAdd format["%1",(_info select 1)];
+			_list lbSetPicture [(lbSize _list)-1,(_info select 2)];
+			_list lbSetData [(lbSize _list)-1,_info select 0];
+			_list lbSetValue [(lbSize _list)-1,_ForEachIndex];
+		} foreach _clothingList;
+	};
 };
