@@ -9,6 +9,9 @@
 */
 private["_stats"];
 
+0 cutText["Setup Loadout","BLACK FADED"];
+0 cutFadeOut 9999999;
+
 _stats = missionNamespace setVariable ["player_stats",(_this select 0)];
 _loadout = _this select 1;
 
@@ -145,3 +148,5 @@ if(count _loadout > 0) then {
 		};
 	} forEach _backpackMagazines;
 };
+
+0 cutText ["","BLACK IN"];	

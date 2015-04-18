@@ -30,7 +30,7 @@ KOTH_store = 0;
 
 missionNamespace setVariable["player_stats",[0,0,0,0]];
 
-0 cutText["Finishing client setup procedure","BLACK FADED"];
+0 cutText["Load Client Data","BLACK FADED"];
 0 cutFadeOut 9999999;
 
 //Server
@@ -69,6 +69,4 @@ else
 	/*  More */
 	player setVariable["nametag", profileName, true];
 	player setVariable["steamID", getPlayerUID player];
-	
-	0 cutText ["","BLACK IN"];	
 };	

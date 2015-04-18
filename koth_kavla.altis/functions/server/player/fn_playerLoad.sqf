@@ -17,7 +17,7 @@ _playerName = [(name _player)] call KOTH_strip;
 _result = ([format["existPlayerData:%1", _playerUID], 2] call KOTH_asyncCall) select 0;
 
 if (!_result) then {
-	[format["insertPlayerData:%1:%2:%3:%4", _playerUID, _playerName, [0,0,0,0], []], 2] call KOTH_asyncCall;
+	[format["insertPlayerData:%1:%2:%3:%4", _playerUID, _playerName, [0,0,0,0], []]] call KOTH_asyncCall;
 };
 
 _data = [format["selectPlayerData:%1", _playerUID], 2] call KOTH_asyncCall;	

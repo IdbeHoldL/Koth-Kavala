@@ -32,6 +32,8 @@ wreckLimit = 10;
 wreckRemovalMinTime = 400;
 wreckRemovalMaxTime = 600;
 
+onPauseScript[] = { "KOTH_fnc_onPause" };
+
 #include "functions\functions.h"
 #include "dialog\common.hpp"
 #include "dialog\shop.hpp"
@@ -39,4 +41,17 @@ wreckRemovalMaxTime = 600;
 class RscTitles
 {
 	#include "dialog\ui.hpp"
+};
+
+class CfgDebriefing
+{
+	class Abort
+	{
+		title = "Successfully Aborted";
+		subtitle = "Player data was synced with the server";
+		description = ";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = { 1, 1, 1, 1 };
+	};
 };

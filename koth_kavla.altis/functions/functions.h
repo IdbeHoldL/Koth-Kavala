@@ -9,6 +9,7 @@ class CfgFunctions
 			class onKeyDown{};
 			class onRespawn{};
 			class onKilled{};
+			class onPause{};
 		};	
 		class player
 		{
