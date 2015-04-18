@@ -9,7 +9,6 @@
 */
 
 while {true} do {
-	uiSleep 3;
 	if (isNull (uiNamespace getvariable ["statsDisplay",displayNull])) then {	
         cutRsc ["statsScreen", "PLAIN"];      
         with uiNamespace do {
@@ -64,4 +63,5 @@ while {true} do {
 		statsind ctrlSetText str tickets_indep;
         statsind ctrlCommit 0.1; 
     };
+	uiSleep 3;
 };

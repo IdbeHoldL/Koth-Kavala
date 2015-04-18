@@ -11,5 +11,5 @@ enableSaving [false,false];
 enableSentences false;
 
 if (isServer) then {
-	[] execVM "server\init\server_init.sqf";
+	[] execVM "functions\server\init\server_init.sqf";
 };

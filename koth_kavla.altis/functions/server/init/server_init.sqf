@@ -8,7 +8,7 @@
 		NONE
 */
 
-[] call compile preprocessFile "server\init\server_compiles.sqf";
+[] call compile preprocessFile "functions\server\init\server_compiles.sqf";
 
 _extDB = false;
 _extDB = ["KOTH","SQL_CUSTOM_V2","KOTH"] call KOTH_extdb;
