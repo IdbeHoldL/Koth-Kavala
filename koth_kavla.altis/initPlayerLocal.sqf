@@ -17,47 +17,58 @@ waitUntil { !isNull player };
 /* Wait for player object to be local */
 waitUntil { local player };
 
+/* End Loading Screen */
+endLoadingScreen;
+
 0 cutText["Setting up client, please wait...","BLACK FADED"];
 0 cutFadeOut 9999999;
 
 /* Variables */
-KOTH_soundLevel = false;
-KOTH_TagsOn = false;
+KOTH_earplugsOff = false;
+KOTH_tagsOff = false;
 KOTH_store = 0;
 
 missionNamespace setVariable["player_stats",[0,0,0,0]];
-missionNamespace setVariable["ticket_stats",[0,0,0]];
-missionNamespace setVariable["player_data",[]];
 
 0 cutText["Finishing client setup procedure","BLACK FADED"];
 0 cutFadeOut 9999999;
 
-/*  Wait for 3D display  */
-waitUntil { !isNull ( findDisplay 46 ) };
+//Server
+waitUntil {sleep 0.01; (!(isNil "server_status"))};
 
-/*  Hide development watermark */
+if (!server_status) then {
+	0 cutText["Error","BLACK FADED"];
+	0 cutFadeOut 9999999;	
+}
+else
 {
-	( ( findDisplay 46) displayCtrl _x ) ctrlShow false;
-} forEach [ 1000, 1001, 1002, 1200, 1202 ];
+	/*  Wait for 3D display  */
+	waitUntil { !isNull ( findDisplay 46 ) };
 
-/*  Add rating  */
-player addRating 99999999;
-player addScore 99999999;
+	/*  Hide development watermark */
+	{
+		( ( findDisplay 46) displayCtrl _x ) ctrlShow false;
+	} forEach [ 1000, 1001, 1002, 1200, 1202 ];
 
-/*  More */
-player setVariable[ "nametag", profileName, true ];
-player setVariable[ "steamID", getPlayerUID player ];
+	/* Loadout */
+	[] call KOTH_fnc_playerLoadout;
 
-/* Loadout */
-[] call KOTH_fnc_playerLoadout;
+	/*  Event Handlers */
+	[] call KOTH_fnc_playerEH;
 
-/*  Event Handlers */
-[] call KOTH_fnc_playerEH;
+	/*  HUD */
+	[] call KOTH_fnc_playerHud;
+	
+	/*  BIS Group System */
+	["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
-/*  HUD */
-[] call KOTH_fnc_playerHud;
+	/*  Add rating  */
+	player addRating 99999999;
+	player addScore 99999999;
 
-/*  BIS Group System */
-["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
-
-0 cutText ["","BLACK IN"];
+	/*  More */
+	player setVariable["nametag", profileName, true];
+	player setVariable["steamID", getPlayerUID player];
+	
+	0 cutText ["","BLACK IN"];	
+};	

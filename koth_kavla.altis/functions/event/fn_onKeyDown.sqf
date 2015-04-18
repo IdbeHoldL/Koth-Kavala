@@ -35,8 +35,8 @@ switch (true) do {
 		};
 	};
 	case (_code in [199,219,220]): {
-		KOTH_TagsOn = !KOTH_TagsOn;
-		if (KOTH_TagsOn) then {
+		KOTH_tagsOff = !KOTH_tagsOff;
+		if (KOTH_tagsOff) then {
 			KOTH_IdPlayerTags = ["KOTH_PlayerTags","onEachFrame","KOTH_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 		} else {
 			[KOTH_IdPlayerTags,"onEachFrame"] call BIS_fnc_removeStackedEventHandler;
@@ -52,8 +52,8 @@ switch (_code) do {
     };
 	//F1
 	case 59 : {
-		KOTH_soundLevel = !KOTH_soundLevel;
-		if (KOTH_soundLevel) then {
+		KOTH_earplugsOff = !KOTH_earplugsOff;
+		if (KOTH_earplugsOff) then {
 			1 fadeSound 0.1; 
 			0 = ["<t size = '0.8' shadow = '0' color = '#99ffffff'>You've inserted your earplugs.</t>", 0, 1, 5, 2, 0, 1] spawn bis_fnc_dynamictext;
 		} else {

@@ -32,4 +32,3 @@ if( _xp >= _nextRank ) then {
 }else{
 	missionNamespace setVariable ["player_stats",[_level,_kills,_deaths,_xp]];
 };
-

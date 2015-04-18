@@ -1,5 +1,5 @@
 /*
-	File: fn_initEventHandlers.sqf
+	File: fn_playerEH.sqf
 	Author: BAROD
 	
 	Description:

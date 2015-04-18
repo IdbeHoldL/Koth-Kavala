@@ -37,20 +37,26 @@ if (isPlayer _victim && isPlayer _killer) then {
 		}
 		else
 		{
-			if (isPlayer _killer) then {
-				{
-					[100,0,1] call KOTH_fnc_playerLevel;
-				} forEach crew _killer;
-			};
+			if ((faction _victim) != (faction _killer)) then {
+				if (isPlayer _killer) then {
+					{
+						[100,0,1] call KOTH_fnc_playerLevel;
+					} forEach crew _killer;
+				};
 					
-			if (isPlayer _victim) then {
-				[0,1,0] call KOTH_fnc_playerLevel;
+				if (isPlayer _victim) then {
+					[0,1,0] call KOTH_fnc_playerLevel;
+				};
+			
+				_distance = floor(_killer distance _victim);
+				_killerVeh  = getText(configFile >> "CfgVehicles" >> (typeOf vehicle _killer) >> "picture");
+			
+				_txt = format ["<t align='left' size='0.9'>%1 </t><img size='1.0' align='left' image='%2'/><t align='left' size='0.9'> %3 </t><t align='left' size='0.9'>[%4m]</t>",_killer getVariable ["nametag",name _killer],_killerVeh,_victim getVariable ["nametag",name _victim],_distance];
+			} else {
+			
+				//Team kill 
+			
 			};
-			
-			_distance = floor(_killer distance _victim);
-			_killerVeh  = getText(configFile >> "CfgVehicles" >> (typeOf vehicle _killer) >> "picture");
-			
-			_txt = format ["<t align='left' size='0.9'>%1 </t><img size='1.0' align='left' image='%2'/><t align='left' size='0.9'> %3 </t><t align='left' size='0.9'>[%4m]</t>",_killer getVariable ["nametag",name _killer],_killerVeh,_victim getVariable ["nametag",name _victim],_distance];
 		};
 	}
 	else

@@ -25,10 +25,9 @@ while {true} do {
         };
     };
     
-	_ticket = missionNamespace getVariable "ticket_stats";	
-	uiNamespace setVariable ['tickets_west', floor (_ticket select 0 / 3)];
-	uiNamespace setVariable ['tickets_east', floor (_ticket select 1 / 3)];
-	uiNamespace setVariable ['tickets_indep', floor (_ticket select 2 / 3)];
+	uiNamespace setVariable ['tickets_west', floor (server_tickets select 0 / 3)];
+	uiNamespace setVariable ['tickets_east', floor (server_tickets select 1 / 3)];
+	uiNamespace setVariable ['tickets_indep', floor (server_tickets select 2 / 3)];
 	
 	_stats = missionNamespace getVariable "player_stats";	
 	_nextRank = 0;
