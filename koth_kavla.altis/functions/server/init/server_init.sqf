@@ -19,15 +19,23 @@ if (!_extDB) exitWith {
 	diag_log "extDB: Failed to Load";
 };
 
+[] call KOTH_markerConfig;
+
 _config = [] call KOTH_loadConfig;
 
 KOTH_config = _config;
 publicVariable "KOTH_config";
 
-KOTH_tickets = [0,0,0];
-publicVariable "KOTH_tickets";
+KOTH_tickets_west = 0;
+publicVariable "KOTH_tickets_west";
+KOTH_tickets_ind = 0;
+publicVariable "KOTH_tickets_ind";
+KOTH_tickets_east = 0; 
+publicVariable "KOTH_tickets_east";
 
 sleep 0.01;
 
 KOTH_server = true;
 publicVariable "KOTH_server";
+
+[] call KOTH_zoneUpdate;

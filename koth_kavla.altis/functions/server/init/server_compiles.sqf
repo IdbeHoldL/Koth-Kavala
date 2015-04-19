@@ -19,6 +19,8 @@ KOTH_playerLoad = compileFinal preprocessFileLineNumbers "functions\server\playe
 
 //Config
 KOTH_loadConfig = compileFinal preprocessFileLineNumbers "functions\server\init\server_config.sqf";
+KOTH_zoneUpdate = compileFinal preprocessFileLineNumbers "functions\server\init\server_zone.sqf";
+KOTH_markerConfig = compileFinal preprocessFileLineNumbers "functions\server\init\server_marker.sqf";
 
 //PVEH
 "KOTH_onPlayerSave" addPublicVariableEventHandler

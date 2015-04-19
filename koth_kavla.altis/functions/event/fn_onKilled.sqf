@@ -21,9 +21,6 @@ if (isPlayer _victim && isPlayer _killer) then {
 				if (isPlayer _killer) then {
 					[100,0,1] call KOTH_fnc_playerLevel;
 				};
-				if (isPlayer _victim) then {
-					[0,1,0] call KOTH_fnc_playerLevel;
-				};
 									
 				_distance = floor(_killer distance _victim);
 				_killerWep = gettext((configFile >> "CfgWeapons" >> currentWeapon _killer) >> "picture");			
@@ -44,10 +41,6 @@ if (isPlayer _victim && isPlayer _killer) then {
 					} forEach crew _killer;
 				};
 					
-				if (isPlayer _victim) then {
-					[0,1,0] call KOTH_fnc_playerLevel;
-				};
-			
 				_distance = floor(_killer distance _victim);
 				_killerVeh  = getText(configFile >> "CfgVehicles" >> (typeOf vehicle _killer) >> "picture");
 			
@@ -57,12 +50,6 @@ if (isPlayer _victim && isPlayer _killer) then {
 				//Team kill 
 			
 			};
-		};
-	}
-	else
-	{
-		if (isPlayer _victim) then {
-			[0,1,0] call KOTH_fnc_playerLevel;
 		};
 	};
 }; 

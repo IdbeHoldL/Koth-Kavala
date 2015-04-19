@@ -14,6 +14,8 @@ _corpse = _this select 1;
 
 [] call KOTH_fnc_playerLoadout;
 
+[0,1,0] call KOTH_fnc_playerLevel;
+
 if (KOTH_config select 0) then {  
 		player enableFatigue false;
 };  
