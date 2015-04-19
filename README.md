@@ -2,7 +2,7 @@
    <img src="https://camo.githubusercontent.com/2040a9e0259fa15679c9c2ef647116f3fee644d8/687474703a2f2f6673312e64697265637475706c6f61642e6e65742f696d616765732f3135303331382f69777432646176652e6a7067" alt="KOTH changelog">
    <h1 align="center">KOTH Kavala</h3><br />
   <a href="https://github.com/BAROD/Koth_Kavala">
-    <img src="http://img.shields.io/badge/Version-0.1-green.svg?style=flat" alt="KOTH changelog">
+    <img src="http://img.shields.io/badge/Version-0.9-green.svg?style=flat" alt="KOTH changelog">
   </a>
     <a href="https://github.com/BAROD/Koth_Kavala/issues">
     <img src="http://img.shields.io/badge/Download-1_MB-blue.svg?style=flat" alt="KOTH download">
