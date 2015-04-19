@@ -49,7 +49,7 @@ class CfgDebriefing
 	{
 		title = "Successfully Aborted";
 		subtitle = "Player data was synced with the server";
-		description = ";
+		description = "";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = { 1, 1, 1, 1 };

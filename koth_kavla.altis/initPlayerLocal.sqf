@@ -34,14 +34,17 @@ missionNamespace setVariable["player_stats",[0,0,0,0]];
 0 cutFadeOut 9999999;
 
 //Server
-waitUntil {sleep 0.01; (!(isNil "server_status"))};
+waitUntil {sleep 0.01; (!(isNil "KOTH_server"))};
 
-if (!server_status) then {
+if (!KOTH_server) then {
 	0 cutText["Error","BLACK FADED"];
 	0 cutFadeOut 9999999;	
 }
 else
 {
+	/*  Config */
+	[] spawn KOTH_fnc_playerConfig;
+	
 	/*  Wait for 3D display  */
 	waitUntil { !isNull ( findDisplay 46 ) };
 
@@ -50,14 +53,14 @@ else
 		( ( findDisplay 46) displayCtrl _x ) ctrlShow false;
 	} forEach [ 1000, 1001, 1002, 1200, 1202 ];
 
-	/* Loadout */
-	[] call KOTH_fnc_playerLoadout;
-
 	/*  Event Handlers */
-	[] call KOTH_fnc_playerEH;
-
+	[] spawn KOTH_fnc_playerEH;
+	
+	/* Loadout */
+	[] spawn KOTH_fnc_playerLoadout;
+	
 	/*  HUD */
-	[] call KOTH_fnc_playerHud;
+	[] spawn KOTH_fnc_playerHud;
 	
 	/*  BIS Group System */
 	["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;

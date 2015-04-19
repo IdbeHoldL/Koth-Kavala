@@ -18,11 +18,11 @@ class CfgFunctions
 			class playerMarkers{};
 			class playerHud{};
 			class playerEH{};
-			class playerView{};
 			class playerTags{};
 			class playerLevel{};
 			class playerSave{};
 			class playerLoad{};
+			class playerConfig{};
 		};
 		class shop
 		{
