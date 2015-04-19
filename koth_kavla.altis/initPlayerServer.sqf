@@ -8,8 +8,8 @@
 		NONE
 */
 
-waitUntil {sleep 0.01; (!(isNil "server_status"))};
+waitUntil {sleep 0.01; (!(isNil "KOTH_server"))};
 
-if (server_status) then {
+if (KOTH_server) then {
 	_this call KOTH_playerLoad;
 };
