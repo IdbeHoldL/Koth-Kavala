@@ -15,9 +15,13 @@ _className = lbData[1003,(lbCurSel 1003)];
 switch (KOTH_store) do {
 	case 0: {
 		_vehicle = createVehicle [_className, (position player), [], 10, "NONE"];
-		0 = [format["<t size='0.8' shadow='0' color='#99ffffff'>%1</t>", getText(configFile >> "CfgVehicles" >> _className >> "displayName")], 0, 1, 5, 2, 0, 1] spawn bis_fnc_dynamictext;
 	};
 	case 1: {
 		_info = [_className] call KOTH_fnc_fetchCfgInfo;
+		
+		switch(_info select 4) do {
+			case "CfgWeapons": { player addWeapon (_className); };
+			case "CfgMagazines": { player addMagazines [(_className), 1]};
+		};	
 	};
 };

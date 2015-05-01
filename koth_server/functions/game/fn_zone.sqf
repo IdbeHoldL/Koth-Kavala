@@ -25,7 +25,7 @@ while {true} do {
 		_distance = _unit distance (getMarkerPos "objective_main");
 	
 		if (_distance < 400) then {
-			[5,0,0] call KOTH_fnc_playerLevel;
+			[5,0,0] call BAROD_fnc_playerLevel;
 			
 			if(side _unit == west) then {
 				_bluCount = _bluCount + 1;
@@ -43,7 +43,7 @@ while {true} do {
 		};
 		
 		if (_distance < 80) then {
-			[10,0,0] call KOTH_fnc_playerLevel;
+			[10,0,0] call BAROD_fnc_playerLevel;
 			
 			if(side _unit == west) then {
 				_bluCount = _bluCount + 2;
@@ -63,7 +63,7 @@ while {true} do {
 	
 			if (_distance < 10) then
 			{
-				[20,0,0] call KOTH_fnc_playerLevel;
+				[20,0,0] call BAROD_fnc_playerLevel;
 			
 				if(side _unit == west) then {
 					_bluCount = _bluCount + 2;
@@ -83,7 +83,7 @@ while {true} do {
 	
 			if (_distance < 10) then
 			{
-				[20,0,0] call KOTH_fnc_playerLevel;
+				[20,0,0] call BAROD_fnc_playerLevel;
 			
 				if(side _unit == west) then {
 					_bluCount = _bluCount + 2;
@@ -102,7 +102,7 @@ while {true} do {
 			_distance = _unit distance (getMarkerPos "tower_3");
 	
 			if (_distance < 10) then {
-				[20,0,0] call KOTH_fnc_playerLevel;
+				[20,0,0] call BAROD_fnc_playerLevel;
 			
 				if(side _unit == west) then {
 					_bluCount = _bluCount + 2;
@@ -122,7 +122,7 @@ while {true} do {
 	
 			if (_distance < 10) then
 			{
-				[20,0,0] call KOTH_fnc_playerLevel;
+				[20,0,0] call BAROD_fnc_playerLevel;
 			
 				if(side _unit == west) then {
 					_bluCount = _bluCount + 2;
@@ -142,7 +142,7 @@ while {true} do {
 	
 			if (_distance < 10) then
 			{
-				[20,0,0] call KOTH_fnc_playerLevel;
+				[20,0,0] call BAROD_fnc_playerLevel;
 			
 				if(side _unit == west) then {
 					_bluCount = _bluCount + 2;
@@ -161,7 +161,7 @@ while {true} do {
 			_distance = _unit distance (getMarkerPos "tower_6");
 	
 			if (_distance < 10) then {
-				[20,0,0] call KOTH_fnc_playerLevel;
+				[20,0,0] call BAROD_fnc_playerLevel;
 			
 				if(side _unit == west) then {
 					_bluCount = _bluCount + 2;
@@ -180,7 +180,7 @@ while {true} do {
 			_distance = _unit distance (getMarkerPos "tower_7");
 	
 			if (_distance < 10) then {
-				[20,0,0] call KOTH_fnc_playerLevel;
+				[20,0,0] call BAROD_fnc_playerLevel;
 			
 				if(side _unit == west) then {
 					_bluCount = _bluCount + 2;

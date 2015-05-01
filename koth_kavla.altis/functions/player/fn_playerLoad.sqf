@@ -11,11 +11,12 @@ private["_stats"];
 
 0 cutText["Setup Loadout","BLACK FADED"];
 0 cutFadeOut 9999999;
+diag_log str _this;
 
 _stats = missionNamespace setVariable ["player_stats",(_this select 0)];
 _loadout = _this select 1;
 
-if(count _loadout > 0) then {
+if (count _loadout != 0) then {
 	_headgear = _loadout select 0;
 	_goggles = _loadout select 1;
 	_uniform = _loadout select 2;

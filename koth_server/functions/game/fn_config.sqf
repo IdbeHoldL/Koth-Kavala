@@ -8,7 +8,7 @@
 		NONE
 */
 
-_config = ["selectConfigData:KOTH", 2] call KOTH_asyncCall;	
+_config = ["selectConfigData:KOTH", 2] call BAROD_fnc_async;	
 
 _arry = [];
 _fatigue = _config select 0;

@@ -8,4 +8,5 @@
 		NONE
 */
 
-["Initialize"] call BIS_fnc_dynamicGroups;  
+["Initialize"] call BIS_fnc_dynamicGroups; 
+[] execVM "koth_server\init\server_init.sqf";

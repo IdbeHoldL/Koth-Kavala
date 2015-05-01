@@ -28,7 +28,6 @@ if( _xp >= _nextRank ) then {
 	_level = _level + 1;
 	if(_xp < 0) then{_xp = 0;};
 	missionNamespace setVariable ["player_stats",[_level,_kills,_deaths,_xp]];
-	0 = [format["<t size='0.8' shadow='0' color='#99ffffff'>Level Up %1</t>", _level], 0, 1, 5, 2, 0, 1] spawn bis_fnc_dynamictext;
 }else{
 	missionNamespace setVariable ["player_stats",[_level,_kills,_deaths,_xp]];
 };

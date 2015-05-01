@@ -1,8 +1,8 @@
 class CfgFunctions
 {
-	tag = "KOTH";
-	class KOTH
+	class KOTH_CLIENT
 	{
+		tag = "KOTH";
 		class client_event
 		{
 			file = "functions\event";

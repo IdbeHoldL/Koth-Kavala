@@ -8,10 +8,8 @@
 		NONE
 */
 
-[] call compile preprocessFile "functions\server\init\server_compiles.sqf";
-
 _extDB = false;
-_extDB = ["KOTH","SQL_CUSTOM_V2","KOTH"] call KOTH_extdb;
+_extDB = ["KOTH","SQL_CUSTOM_V2","KOTH"] call compile preprocessfilelinenumbers "koth_server\functions\extDB\fn_extdb.sqf";
 
 if (!_extDB) exitWith {
 	KOTH_server = false;
@@ -19,12 +17,13 @@ if (!_extDB) exitWith {
 	diag_log "extDB: Failed to Load";
 };
 
-[] call KOTH_markerConfig;
+[] call BAROD_fnc_marker;
 
-_config = [] call KOTH_loadConfig;
-
-KOTH_config = _config;
+KOTH_config = [] call BAROD_fnc_config;
 publicVariable "KOTH_config";
+
+//PVEH
+"KOTH_onPlayerSave" addPublicVariableEventHandler {(_this select 1) spawn BAROD_fnc_playerSave};
 
 KOTH_tickets_west = 0;
 publicVariable "KOTH_tickets_west";
@@ -38,4 +37,4 @@ sleep 0.01;
 KOTH_server = true;
 publicVariable "KOTH_server";
 
-[] call KOTH_zoneUpdate;
+[] call BAROD_fnc_zone;

@@ -20,8 +20,9 @@ _cfg = switch (true) do {
 	case (isClass (configFile >> "CfgGlasses" >> _class)) : {"CfgGlasses";};
 };
 
-_info pushback _class;
-_info pushback getText(configFile >> _cfg >> _class >> "displayName");
-_info pushback getText(configFile >> _cfg >> _class >> "picture");
-_info pushback getText(configFile >> _cfg >> _class >> "descriptionshort");
+_info pushback _class;	//0
+_info pushback getText(configFile >> _cfg >> _class >> "displayName"); //1
+_info pushback getText(configFile >> _cfg >> _class >> "picture");	//2
+_info pushback getText(configFile >> _cfg >> _class >> "descriptionshort"); //3
+_info pushback _cfg;  //4
 _info;

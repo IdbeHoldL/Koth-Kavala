@@ -11,5 +11,5 @@
 waitUntil {sleep 0.01; (!(isNil "KOTH_server"))};
 
 if (KOTH_server) then {
-	_this call KOTH_playerLoad;
+	_this call BAROD_fnc_playerLoad;
 };

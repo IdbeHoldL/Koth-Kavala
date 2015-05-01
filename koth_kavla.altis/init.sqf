@@ -7,9 +7,6 @@
 	Parameters:
 		NONE
 */
+
 enableSaving [false,false];
 enableSentences false;
-
-if (isServer) then {
-	[] execVM "functions\server\init\server_init.sqf";
-};

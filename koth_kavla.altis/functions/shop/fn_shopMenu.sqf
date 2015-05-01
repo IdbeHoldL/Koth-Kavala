@@ -9,10 +9,10 @@
 */
 
 private["_store"];
+disableSerialization;
 
 _store = [(_this select 3),0,"",[""]] call BIS_fnc_param;
 
-disableSerialization;
 if(!createDialog "koth_shop") exitWith {};
 
 switch (_store) do {
@@ -60,5 +60,12 @@ switch (_store) do {
 			_list lbSetData [(lbSize _list)-1,_info select 0];
 			_list lbSetValue [(lbSize _list)-1,_ForEachIndex];
 		} foreach _clothingList;
+		
+		KOTH_shopGear = [];
+		KOTH_shopGear pushBack headgear player;
+		KOTH_shopGear pushBack goggles player;
+		KOTH_shopGear pushBack uniform player;
+		KOTH_shopGear pushBack vest player;
+		KOTH_shopGear pushBack backpack player;
 	};
 };
