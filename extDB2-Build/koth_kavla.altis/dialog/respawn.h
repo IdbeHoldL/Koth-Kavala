@@ -1,13 +1,13 @@
-class Survival_RespawnDialog
+class KOTH_RespawnDialog
 {
 	idd = 1000;
-	name = "Survival_RespawnDialog";
+	name = "KOTH_RespawnDialog";
 	movingEnabled = false;
 	enableSimulation = true;
 	
 	class controls
 	{
-		class Respawn_Text_: SURVIVAL_RscText
+		class Respawn_Text: KOTH_RscText
 		{
 			idc = 1001;
 			text = "You Are Unconscious";
@@ -20,7 +20,7 @@ class Survival_RespawnDialog
 			colorBackground[] = {0,0,0,0};
 			colorText[] = {1,1,1,0.7};
 		};
-		class Respawn_Button_ : SURVIVAL_RscButton
+		class Respawn_Button : KOTH_RscButton
 		{
 			idc = 1002;
 			text = "Respawn";

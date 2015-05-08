@@ -15,7 +15,6 @@ private["_unit","_killer"];
 _unit = _this select 0;
 _killer = _this select 1;
 
-
 SURVIVAL_deathScreem  = "CAMERA" camCreate (getPosWorld _unit);
 showCinemaBorder false;
 SURVIVAL_deathScreem cameraEffect ["Internal","Back"];
@@ -28,7 +27,7 @@ SURVIVAL_deathScreem camCommit 0;
 
 if (_revive) then {
 	setPlayerRespawnTime 600;
-	createDialog "Survival_RespawnDialog";
+	createDialog "KOTH_RespawnDialog";
 } else {
 	setPlayerRespawnTime 15;
 };
@@ -37,7 +36,7 @@ if (_revive) then {
 	while {!alive player} do {
 		if (playerRespawnTime <= 15) exitWith{ closeDialog 0; };
 		if (!dialog) then{
-			createDialog "Survival_RespawnDialog";
+			createDialog "KOTH_RespawnDialog";
 		};
 		sleep 1;
 	};
