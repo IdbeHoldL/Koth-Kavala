@@ -46,6 +46,13 @@ switch (true) do {
 };
 
 switch (_code) do {
+		//ESC
+	case 1: {	
+		if( !alive player ) then {
+				_handled = true;
+		};		
+	};
+
 	//U
 	case 22 : {
 		([] call BIS_fnc_displayMission) createDisplay "RscDisplayDynamicGroups";
